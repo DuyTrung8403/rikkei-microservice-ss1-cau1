@@ -1,0 +1,20 @@
+1. Tại sao chọn kiến trúc là bước sống còn?
+Chi phí sửa đổi đắt đỏ: Sai kiến trúc từ đầu, về sau muốn sửa sẽ phải "đập đi xây lại" tốn kém cả thời gian lẫn tiền bạc.
+Quyết định độ bền vững: Kiến trúc tốt quyết định hệ thống có chịu tải được không, có bảo mật không (phi chức năng).
+Phân bổ nhân sự (Định luật Conway): Kiến trúc định hình cách chia team làm việc độc lập, tránh giẫm chân lên code của nhau.
+2. Các loại kiến trúc phần mềm phổ biến
+Kiến trúc Nguyên khối (Monolithic): Tất cả code (UI, Logic, DB access) gom thành một khối duy nhất.
+Ưu: Dễ code, dễ deploy nhanh cho MVP.
+Nhược: Khó nâng cấp, code phình to rất nặng nề.
+Kiến trúc Vi dịch vụ (Microservices): Chia hệ thống thành nhiều dịch vụ nhỏ độc lập (VD: User Service, Order Service).
+Ưu: Dễ mở rộng từng phần, không sập toàn cục.
+Nhược: Triển khai và bảo trì hạ tầng rất phức tạp.
+Kiến trúc Hướng sự kiện (Event-Driven): Các dịch vụ không gọi nhau trực tiếp mà phản hồi qua các "Sự kiện" (VD dùng Kafka).
+Ưu: Hoạt động bất đồng bộ siêu nhanh, kết nối lỏng lẻo.
+Nhược: Rất khó trace lỗi (debug) luồng chạy.
+3. Các thuộc tính chất lượng cốt lõi (Quality Attributes)
+Scalability (Khả năng mở rộng): Khả năng tự động tăng tài nguyên để xử lý khi lượng người dùng tăng đột biến.
+Availability (Tính sẵn sàng): Tỷ lệ thời gian hệ thống "sống" và phục vụ khách hàng (thường yêu cầu uptime 99.99%).
+Maintainability (Tính bảo trì): Code clean, dễ đọc, dễ sửa bug và thêm tính năng mới mà không làm hỏng tính năng cũ.
+Performance (Hiệu năng): Tốc độ phản hồi (Response Time) nhanh và xử lý được nhiều tác vụ cùng lúc.
+Security (Bảo mật): Khả năng chống hacker, chống mất mát và rò rỉ dữ liệu của khách hàng.
